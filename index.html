@@ -34,7 +34,7 @@
         <a href="./menu.html">menu</a>
         <a href="#hiring">careers</a>
         <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
-        <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn btn-sm">apply now</a>
+        <a href="https://bk-hiring-os-production.up.railway.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn btn-sm">apply now</a>
       </nav>
 
       <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
@@ -60,7 +60,7 @@
       <a href="./menu.html">menu</a>
       <a href="#hiring">careers</a>
       <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
-      <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn">apply now</a>
+      <a href="https://bk-hiring-os-production.up.railway.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn">apply now</a>
     </nav>
   </div>
 
@@ -103,10 +103,32 @@
         <p class="section-label section-label--light">join the team</p>
         <h2 class="section-heading section-heading--light">now hiring</h2>
         <p class="hiring-body">we're growing and looking for people who care about good coffee, great food, and making someone's day a little better.</p>
-        <p class="hiring-body">positions available across all locations.</p>
-        <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn btn-light">view open positions</a>
+        <div id="open-positions" style="margin-top: 1.5rem;"></div>
+        <a href="https://bk-hiring-os-production.up.railway.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn btn-light" style="margin-top: 1.5rem;">apply now</a>
       </div>
     </section>
+    <script>
+      fetch('https://bk-hiring-os-production.up.railway.app/api/roles')
+        .then(r => r.json())
+        .then(roles => {
+          const active = roles.filter(r => r.brand === 'drip' && r.status === 'active');
+          const el = document.getElementById('open-positions');
+          if (active.length === 0) {
+            el.innerHTML = '<p class="hiring-body" style="opacity: 0.7;">no open positions right now. check back soon.</p>';
+          } else {
+            el.innerHTML = active.map(r => 
+              '<div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between;">' +
+                '<div>' +
+                  '<div style="font-weight: 600; font-size: 1rem;">' + r.title.toLowerCase() + '</div>' +
+                  '<div style="font-size: 0.8rem; opacity: 0.7;">' + (r.location || '').toLowerCase() + '</div>' +
+                '</div>' +
+                '<a href="https://bk-hiring-os-production.up.railway.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" style="background: #c9a96e; color: #2b2b2b; padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none;">apply</a>' +
+              '</div>'
+            ).join('');
+          }
+        })
+        .catch(() => {});
+    </script>
 
     <!-- EVENT BOOKING -->
     <section class="events">
@@ -200,7 +222,7 @@
         <a href="./menu.html">menu</a>
         <a href="#hiring">careers</a>
         <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
-        <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer">apply</a>
+        <a href="https://bk-hiring-os-production.up.railway.app/#/jobs/drip" target="_blank" rel="noopener noreferrer">apply</a>
       </div>
       <div class="footer-social">
         <a href="https://www.instagram.com/drip.coffe.e/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
