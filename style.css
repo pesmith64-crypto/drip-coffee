@@ -279,10 +279,11 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    oklch(from var(--color-cream) l c h / 0.05) 0%,
-    oklch(from var(--color-cream) l c h / 0.2) 30%,
-    oklch(from var(--color-cream) l c h / 0.65) 60%,
-    var(--color-cream) 88%
+    oklch(from var(--color-cream) l c h / 0.0) 0%,
+    oklch(from var(--color-cream) l c h / 0.1) 25%,
+    oklch(from var(--color-cream) l c h / 0.55) 50%,
+    oklch(from var(--color-cream) l c h / 0.88) 65%,
+    var(--color-cream) 80%
   );
 }
 
@@ -317,6 +318,24 @@
   gap: var(--space-3);
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 85vh;
+  }
+  .hero-content {
+    padding-top: 38vh;
+    padding-bottom: var(--space-8);
+  }
+  .hero-actions {
+    margin-top: var(--space-4);
+  }
+  .hero-actions .btn {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-xs);
+  }
 }
 
 /* ---- ABOUT STRIP ---- */
@@ -440,7 +459,6 @@
   font-family: var(--font-body);
   font-weight: 400;
   letter-spacing: 0.04em;
-  text-transform: lowercase;
   color: var(--color-text);
   background: transparent;
   border: 1px solid var(--color-border);
@@ -564,7 +582,6 @@
   font-family: var(--font-display);
   font-size: var(--text-lg);
   font-weight: 400;
-  text-transform: lowercase;
   margin-bottom: var(--space-2);
 }
 
