@@ -23,11 +23,12 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="/" class="logo" aria-label="drip coffee & baked goods home">
-        <img src="./assets/drip-logo.png" alt="drip coffee & baked goods" class="logo-img">
+        <img src="./assets/drip-circle-logo.svg" alt="drip coffee & baked goods" class="logo-img">
       </a>
 
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#locations">locations</a>
+        <a href="./menu.html">menu</a>
         <a href="#hiring">careers</a>
         <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
         <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn btn-sm">apply now</a>
@@ -53,6 +54,7 @@
     </button>
     <nav aria-label="Mobile navigation">
       <a href="#locations">locations</a>
+      <a href="./menu.html">menu</a>
       <a href="#hiring">careers</a>
       <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
       <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn">apply now</a>
@@ -62,67 +64,20 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero">
+      <div class="hero-image">
+        <img src="./assets/hero-spring-sips.jpg" alt="Drip Coffee spring drinks lineup - Blackberry Bloom, Petal Kiss, Spring Rain, Honey Lavender Latte" class="hero-photo">
+        <div class="hero-overlay"></div>
+      </div>
       <div class="hero-content">
         <div class="hero-logo-large">
-          <img src="./assets/drip-logo.png" alt="drip coffee & baked goods" class="hero-logo-img" width="2400" height="2401">
+          <img src="./assets/drip-circle-logo.svg" alt="drip coffee & baked goods" class="hero-logo-img" width="280" height="280">
         </div>
         <p class="hero-sub">craft coffee and fresh-baked goods made daily in south dakota.</p>
         <p class="hero-est">est. 2022</p>
         <div class="hero-actions">
           <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer" class="btn btn-primary">order online</a>
+          <a href="./menu.html" class="btn btn-outline">view menu</a>
           <a href="#locations" class="btn btn-outline">find us</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOCATIONS -->
-    <section class="locations" id="locations">
-      <div class="section-inner">
-        <p class="section-label">where to find us</p>
-        <h2 class="section-heading">our locations</h2>
-
-        <!-- Location cards with images -->
-        <div class="locations-grid">
-
-          <a href="https://maps.google.com/?q=502+Main+Ave+Lake+Norden+SD+57248" target="_blank" rel="noopener noreferrer" class="loc-card">
-            <div class="loc-img-wrap">
-              <img src="./assets/lake-norden-interior.jpg" alt="Drip Coffee Lake Norden interior with fireplace lounge" loading="lazy" width="800" height="533">
-            </div>
-            <div class="loc-info">
-              <h3 class="loc-name">lake norden</h3>
-              <p class="loc-address">502 main ave<br>lake norden, sd 57248</p>
-              <span class="loc-badge loc-badge--open">open</span>
-            </div>
-          </a>
-
-          <a href="https://maps.google.com/?q=928+11th+St+SE+Watertown+SD+57201" target="_blank" rel="noopener noreferrer" class="loc-card">
-            <div class="loc-img-wrap">
-              <img src="./assets/watertown.jpg" alt="Drip Coffee Watertown exterior storefront" loading="lazy" width="1933" height="1220">
-            </div>
-            <div class="loc-info">
-              <h3 class="loc-name">watertown</h3>
-              <p class="loc-address">928 11th st se<br>watertown, sd 57201</p>
-              <span class="loc-badge loc-badge--open">open</span>
-            </div>
-          </a>
-
-          <div class="loc-card loc-card--coming">
-            <div class="loc-img-wrap loc-img-placeholder">
-              <span class="loc-placeholder-text">opening mid-may 2026</span>
-            </div>
-            <div class="loc-info">
-              <h3 class="loc-name">brookings</h3>
-              <p class="loc-address">near sdsu campus<br>brookings, sd</p>
-              <span class="loc-badge loc-badge--soon">coming soon</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Hours -->
-        <div class="hours-bar">
-          <p class="hours-label">hours</p>
-          <p class="hours-detail">mon - thu: 7am - 7:30pm &nbsp;&middot;&nbsp; fri: 7am - 8:30pm &nbsp;&middot;&nbsp; sat: 8am - 8:30pm &nbsp;&middot;&nbsp; sun: closed</p>
         </div>
       </div>
     </section>
@@ -144,7 +99,77 @@
         <p class="section-label">mobile cart</p>
         <h2 class="section-heading">book us for your event</h2>
         <p class="events-body">let us help take your event to the next level with customized drinks to fit your brand.</p>
-        <a href="mailto:dripcoffee22@gmail.com" class="btn btn-outline">get in touch</a>
+        <a href="mailto:info@dripcoffee.com" class="btn btn-outline">get in touch</a>
+      </div>
+    </section>
+
+    <!-- LOCATIONS BAR -->
+    <section class="locations-bar" id="locations">
+      <div class="locations-bar-inner">
+        <div class="loc-buttons">
+          <button class="loc-btn" data-location="lake-norden" aria-expanded="false">
+            <span class="loc-btn-name">lake norden</span>
+            <span class="loc-btn-status loc-btn-status--open">open</span>
+          </button>
+          <button class="loc-btn" data-location="watertown" aria-expanded="false">
+            <span class="loc-btn-name">watertown</span>
+            <span class="loc-btn-status loc-btn-status--open">open</span>
+          </button>
+          <button class="loc-btn" data-location="brookings" aria-expanded="false">
+            <span class="loc-btn-name">brookings</span>
+            <span class="loc-btn-status loc-btn-status--soon">coming soon</span>
+          </button>
+        </div>
+
+        <div class="loc-hours">
+          <span>mon-thu: 7am-7:30pm</span>
+          <span class="loc-hours-sep">&middot;</span>
+          <span>fri: 7am-8:30pm</span>
+          <span class="loc-hours-sep">&middot;</span>
+          <span>sat: 8am-8:30pm</span>
+          <span class="loc-hours-sep">&middot;</span>
+          <span>sun: closed</span>
+        </div>
+      </div>
+
+      <!-- Expandable location details -->
+      <div class="loc-detail" id="loc-lake-norden" aria-hidden="true">
+        <div class="loc-detail-inner">
+          <div class="loc-detail-photo">
+            <img src="./assets/lake-norden-interior.jpg" alt="Drip Coffee Lake Norden interior" loading="lazy">
+          </div>
+          <div class="loc-detail-info">
+            <h3>lake norden</h3>
+            <p class="loc-detail-address">502 main ave, unit 109<br>lake norden, sd 57248</p>
+            <p class="loc-detail-phone">(605) 520-8960</p>
+            <a href="https://maps.google.com/?q=502+Main+Ave+Lake+Norden+SD+57248" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">get directions</a>
+            <a href="https://order.dripos.com/drip-coffee/lake-norden" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">order from here</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-detail" id="loc-watertown" aria-hidden="true">
+        <div class="loc-detail-inner">
+          <div class="loc-detail-photo">
+            <img src="./assets/watertown-exterior.jpg" alt="Drip Coffee Watertown storefront" loading="lazy">
+          </div>
+          <div class="loc-detail-info">
+            <h3>watertown</h3>
+            <p class="loc-detail-address">928 11th st se<br>watertown, sd 57201</p>
+            <a href="https://maps.google.com/?q=928+11th+St+SE+Watertown+SD+57201" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">get directions</a>
+            <a href="https://order.dripos.com/drip-coffee/watertown" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">order from here</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-detail" id="loc-brookings" aria-hidden="true">
+        <div class="loc-detail-inner">
+          <div class="loc-detail-info loc-detail-info--full">
+            <h3>brookings</h3>
+            <p class="loc-detail-address">716 20th st s, ste a<br>brookings, sd 57006</p>
+            <p class="loc-detail-coming">opening mid-may 2026</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -153,10 +178,11 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="footer-submark">COFFEE<br>& BAKED GOODS</span>
+        <img src="./assets/drip-circle-logo.svg" alt="drip coffee & baked goods" class="footer-logo-img">
       </div>
       <div class="footer-links">
         <a href="#locations">locations</a>
+        <a href="./menu.html">menu</a>
         <a href="#hiring">careers</a>
         <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
         <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer">apply</a>
@@ -169,7 +195,7 @@
             <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
           </svg>
         </a>
-        <a href="mailto:dripcoffee22@gmail.com" aria-label="Email us">
+        <a href="mailto:info@dripcoffee.com" aria-label="Email us">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="M22 7l-10 7L2 7"/>

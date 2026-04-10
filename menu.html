@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>menu - drip coffee & baked goods</title>
+  <meta name="description" content="our full menu of craft coffee, refreshers, baked goods, and more at drip coffee & baked goods.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a href="#main" class="sr-only" style="position:absolute;top:0;left:0;padding:8px;background:var(--color-bg);z-index:999;">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="./" class="logo" aria-label="drip coffee & baked goods home">
+        <img src="./assets/drip-circle-logo.svg" alt="drip coffee & baked goods" class="logo-img">
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="./#locations">locations</a>
+        <a href="./menu.html" class="nav-active">menu</a>
+        <a href="./#hiring">careers</a>
+        <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
+        <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn btn-sm">apply now</a>
+      </nav>
+
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <button class="mobile-close-btn" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <line x1="6" y1="6" x2="18" y2="18"/>
+        <line x1="6" y1="18" x2="18" y2="6"/>
+      </svg>
+    </button>
+    <nav aria-label="Mobile navigation">
+      <a href="./#locations">locations</a>
+      <a href="./menu.html">menu</a>
+      <a href="./#hiring">careers</a>
+      <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
+      <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn">apply now</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- MENU HEADER -->
+    <section class="menu-hero">
+      <div class="menu-hero-inner">
+        <p class="section-label">what we serve</p>
+        <h1 class="section-heading menu-title">our menu</h1>
+        <p class="menu-note">prices and availability may vary by location. order ahead for pickup.</p>
+        <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer" class="btn btn-primary">order online</a>
+      </div>
+    </section>
+
+    <!-- MENU CONTENT -->
+    <div class="menu-content">
+
+      <!-- COFFEE -->
+      <section class="menu-section" id="coffee">
+        <h2 class="menu-cat">coffee</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <span class="menu-item-name">americano</span>
+            <span class="menu-item-price">$4.20+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">black coffee</span>
+            <span class="menu-item-price">$3.00+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">caramel macchiato</span>
+            <span class="menu-item-price">$5.25+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">cold brew</span>
+            <span class="menu-item-price">$4.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">cold brew frap</span>
+            <span class="menu-item-price">$5.00+</span>
+          </div>
+          <div class="menu-item menu-item--signature">
+            <span class="menu-item-name">drip latte</span>
+            <span class="menu-item-desc">our signature latte, white mocha and vanilla breve</span>
+            <span class="menu-item-price">$5.25+</span>
+          </div>
+          <div class="menu-item menu-item--signature">
+            <span class="menu-item-name">drip shaken</span>
+            <span class="menu-item-desc">vanilla and brown sugar cinnamon topped with oat milk</span>
+            <span class="menu-item-price">$5.25+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">espresso</span>
+            <span class="menu-item-price">$2.50+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">frappe</span>
+            <span class="menu-item-desc">delicious blended goodness</span>
+            <span class="menu-item-price">$5.25+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">frozen espresso</span>
+            <span class="menu-item-desc">a favorite caffeine overload blended drink</span>
+            <span class="menu-item-price">$5.50+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">latte</span>
+            <span class="menu-item-price">$4.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">shaken espresso</span>
+            <span class="menu-item-price">$4.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">white mocha</span>
+            <span class="menu-item-price">$5.25+</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- REFRESHERS -->
+      <section class="menu-section" id="refreshers">
+        <h2 class="menu-cat">refreshers</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <span class="menu-item-name">apple refresh</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">berry burst</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">cloud nine</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">huckleberry finn</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">just peachy</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">mango madness</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">palm beach</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">summer season</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">top gun</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">build your own</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- NON COFFEE -->
+      <section class="menu-section" id="non-coffee">
+        <h2 class="menu-cat">non-coffee drinks</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <span class="menu-item-name">apple cider</span>
+            <span class="menu-item-price">$4.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">chai</span>
+            <span class="menu-item-price">$4.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">dirty soda</span>
+            <span class="menu-item-price">$6.00+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">frozen lemonade</span>
+            <span class="menu-item-price">$4.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">fruit smoothie</span>
+            <span class="menu-item-price">$5.25+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">hot chocolate</span>
+            <span class="menu-item-price">$4.20+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">hot tea</span>
+            <span class="menu-item-price">$3.50+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">italian cream soda</span>
+            <span class="menu-item-price">$4.00+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">lemonade</span>
+            <span class="menu-item-price">$3.25+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">matcha</span>
+            <span class="menu-item-price">$4.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">medicine ball</span>
+            <span class="menu-item-price">$4.20+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">pink starburst</span>
+            <span class="menu-item-price">$5.00+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">vanilla bean</span>
+            <span class="menu-item-price">$4.00+</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEASONAL -->
+      <section class="menu-section menu-section--seasonal" id="seasonal">
+        <h2 class="menu-cat">seasonal menu</h2>
+        <div class="menu-grid">
+          <div class="menu-item menu-item--signature">
+            <span class="menu-item-name">spring rain</span>
+            <span class="menu-item-desc">fan fave</span>
+            <span class="menu-item-price">$5.00+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">blackberry bloom</span>
+            <span class="menu-item-desc">redbull refresher with blackberry, topped with lemonade</span>
+            <span class="menu-item-price">$5.75+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">petal kiss</span>
+            <span class="menu-item-desc">vanilla matcha + strawberry cold foam</span>
+            <span class="menu-item-price">$5.25+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">honey lavender latte</span>
+            <span class="menu-item-price">$5.25+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">avocado toast</span>
+            <span class="menu-item-price">$4.00+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">sugar cookie</span>
+            <span class="menu-item-price">$3.75</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOD -->
+      <section class="menu-section" id="food">
+        <h2 class="menu-cat">food</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <span class="menu-item-name">breakfast sandwich</span>
+            <span class="menu-item-price">$4.25+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">blueberry muffin</span>
+            <span class="menu-item-price">$3.25</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">chocolate croissant</span>
+            <span class="menu-item-price">$1.75</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">chocolate muffin</span>
+            <span class="menu-item-price">$3.25</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">cinnamon chip scone</span>
+            <span class="menu-item-price">$4.00</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">cinnamon roll</span>
+            <span class="menu-item-price">$4.25</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">crumble copycat cookie</span>
+            <span class="menu-item-price">$3.75</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">everything bagel</span>
+            <span class="menu-item-price">$3.50+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">plain bagel</span>
+            <span class="menu-item-price">$3.25+</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">scotcheroo bar</span>
+            <span class="menu-item-price">$2.50</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEVERAGE FRIDGE -->
+      <section class="menu-section" id="fridge">
+        <h2 class="menu-cat">beverage fridge</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <span class="menu-item-name">boba</span>
+            <span class="menu-item-price">$3.50</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">bubblr'</span>
+            <span class="menu-item-price">$2.75</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">kombucha</span>
+            <span class="menu-item-price">$3.75</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">redbull</span>
+            <span class="menu-item-price">$3.00</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">pop</span>
+            <span class="menu-item-price">$1.00</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- RETAIL -->
+      <section class="menu-section" id="retail">
+        <h2 class="menu-cat">beans & merch</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <span class="menu-item-name">1lb colombian beans</span>
+            <span class="menu-item-price">$20.00</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">handcrafted cup</span>
+            <span class="menu-item-price">$23.00</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">syrup bottle</span>
+            <span class="menu-item-price">$12.00</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">keychain</span>
+            <span class="menu-item-price">$3.25</span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item-name">sticker</span>
+            <span class="menu-item-price">$2.50</span>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /menu-content -->
+
+    <!-- CTA -->
+    <section class="menu-cta">
+      <p>ready to order?</p>
+      <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer" class="btn btn-primary">order online</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./assets/drip-circle-logo.svg" alt="drip coffee & baked goods" class="footer-logo-img">
+      </div>
+      <div class="footer-links">
+        <a href="./#locations">locations</a>
+        <a href="./menu.html">menu</a>
+        <a href="./#hiring">careers</a>
+        <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
+        <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer">apply</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/drip.coffe.e/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="5"/>
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="mailto:info@dripcoffee.com" aria-label="Email us">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M22 7l-10 7L2 7"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 drip coffee & baked goods</p>
+    </div>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
