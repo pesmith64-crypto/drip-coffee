@@ -271,7 +271,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 70%;
+  object-position: center 20%;
 }
 
 .hero-overlay {
@@ -279,10 +279,10 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    oklch(from var(--color-cream) l c h / 0.5) 0%,
-    oklch(from var(--color-cream) l c h / 0.75) 35%,
-    oklch(from var(--color-cream) l c h / 0.88) 60%,
-    var(--color-cream) 100%
+    oklch(from var(--color-cream) l c h / 0.15) 0%,
+    oklch(from var(--color-cream) l c h / 0.4) 25%,
+    oklch(from var(--color-cream) l c h / 0.72) 55%,
+    var(--color-cream) 90%
   );
 }
 
