@@ -396,84 +396,119 @@
 
 .locations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-5);
+  margin-bottom: var(--space-10);
 }
 
-.location-card {
-  background: var(--color-bg);
+@media (max-width: 860px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+}
+
+.loc-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   border-radius: var(--radius-lg);
-  padding: var(--space-6) var(--space-5);
+  overflow: hidden;
+  background: var(--color-bg);
   border: 1px solid oklch(from #2b2b2b l c h / 0.05);
+  transition: box-shadow 200ms ease, transform 200ms ease;
 }
 
-.location-status {
+a.loc-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.loc-img-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-blush-light);
+}
+
+.loc-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.loc-img-placeholder {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  margin-bottom: var(--space-4);
+  justify-content: center;
+  background: oklch(from var(--color-blush) l c h / 0.3);
 }
 
-.status-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.status-dot--open { background: var(--color-sage); }
-.status-dot--soon { background: #c9933a; }
-.status-dot--future { background: var(--color-text-faint); }
-
-.status-text {
+.loc-placeholder-text {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  font-weight: 400;
 }
 
-.location-name {
+.loc-info {
+  padding: var(--space-4) var(--space-4) var(--space-5);
+}
+
+.loc-name {
   font-family: var(--font-display);
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   font-weight: 400;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
   text-transform: lowercase;
 }
 
-.location-address {
-  font-size: var(--text-sm);
+.loc-address {
+  font-size: var(--text-xs);
   color: var(--color-text-muted);
   line-height: 1.6;
   margin-bottom: var(--space-3);
 }
 
-.location-hours {
-  margin-bottom: var(--space-4);
+.loc-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-weight: 500;
 }
 
-.location-hours p {
+.loc-badge--open {
+  color: var(--color-sage-dark);
+  background: oklch(from var(--color-sage) l c h / 0.1);
+}
+
+.loc-badge--soon {
+  color: #8a7040;
+  background: oklch(from #c9933a l c h / 0.1);
+}
+
+/* Hours bar */
+.hours-bar {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-6);
+  text-align: center;
+}
+
+.hours-label {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.hours-detail {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
-  line-height: 1.7;
-}
-
-.location-phone {
-  display: inline-block;
-  font-size: var(--text-sm);
-  color: var(--color-text);
-  text-decoration: none;
-  margin-bottom: var(--space-5);
-  font-weight: 400;
-}
-
-.location-phone:hover {
-  color: var(--color-sage);
-}
-
-.location-note {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* ---- HIRING ---- */
@@ -612,17 +647,17 @@
     }
   }
 
-  .location-card,
+  .loc-card,
   .about-item {
     opacity: 0;
     transform: translateY(16px);
   }
-  .location-card.is-visible,
+  .loc-card.is-visible,
   .about-item.is-visible {
     animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
-  .location-card:nth-child(2).is-visible,
+  .loc-card:nth-child(2).is-visible,
   .about-item:nth-child(3).is-visible { animation-delay: 0.08s; }
-  .location-card:nth-child(3).is-visible,
+  .loc-card:nth-child(3).is-visible,
   .about-item:nth-child(5).is-visible { animation-delay: 0.16s; }
 }

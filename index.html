@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>drip coffee & baked goods</title>
-  <meta name="description" content="drip coffee & baked goods. craft coffee and fresh-baked goods in lake norden, brookings, and watertown, south dakota. est. 2022.">
+  <meta name="description" content="drip coffee & baked goods. craft coffee and fresh-baked goods in lake norden, watertown, and brookings, south dakota. est. 2022.">
   <meta property="og:title" content="drip coffee & baked goods">
-  <meta property="og:description" content="craft coffee and fresh-baked goods in lake norden, brookings, and watertown, south dakota.">
+  <meta property="og:description" content="craft coffee and fresh-baked goods in lake norden, watertown, and brookings, south dakota.">
   <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#locations">locations</a>
         <a href="#hiring">careers</a>
-        <a href="https://order.dripos.com/Drip-Coffee-Lake-Norden" target="_blank" rel="noopener noreferrer">order online</a>
+        <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
         <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn btn-sm">apply now</a>
       </nav>
 
@@ -54,7 +54,7 @@
     <nav aria-label="Mobile navigation">
       <a href="#locations">locations</a>
       <a href="#hiring">careers</a>
-      <a href="https://order.dripos.com/Drip-Coffee-Lake-Norden" target="_blank" rel="noopener noreferrer">order online</a>
+      <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
       <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn">apply now</a>
     </nav>
   </div>
@@ -69,28 +69,8 @@
         <p class="hero-sub">craft coffee and fresh-baked goods made daily in south dakota.</p>
         <p class="hero-est">est. 2022</p>
         <div class="hero-actions">
-          <a href="https://order.dripos.com/Drip-Coffee-Lake-Norden" target="_blank" rel="noopener noreferrer" class="btn btn-primary">order online</a>
+          <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer" class="btn btn-primary">order online</a>
           <a href="#locations" class="btn btn-outline">find us</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT STRIP -->
-    <section class="about-strip">
-      <div class="about-inner">
-        <div class="about-item">
-          <span class="about-label">coffee</span>
-          <span class="about-detail">espresso, lattes, refreshers, seasonal specials</span>
-        </div>
-        <div class="about-divider"></div>
-        <div class="about-item">
-          <span class="about-label">baked goods</span>
-          <span class="about-detail">cinnamon rolls, croissants, cookies, breakfast sandwiches</span>
-        </div>
-        <div class="about-divider"></div>
-        <div class="about-item">
-          <span class="about-label">events</span>
-          <span class="about-detail">book our mobile cart for your next event</span>
         </div>
       </div>
     </section>
@@ -99,46 +79,50 @@
     <section class="locations" id="locations">
       <div class="section-inner">
         <p class="section-label">where to find us</p>
-        <h2 class="section-heading">locations</h2>
+        <h2 class="section-heading">our locations</h2>
+
+        <!-- Location cards with images -->
         <div class="locations-grid">
 
-          <div class="location-card location-card--open">
-            <div class="location-status">
-              <span class="status-dot status-dot--open"></span>
-              <span class="status-text">open now</span>
+          <a href="https://maps.google.com/?q=502+Main+Ave+Lake+Norden+SD+57248" target="_blank" rel="noopener noreferrer" class="loc-card">
+            <div class="loc-img-wrap">
+              <img src="./assets/lake-norden-interior.jpg" alt="Drip Coffee Lake Norden interior with fireplace lounge" loading="lazy" width="800" height="533">
             </div>
-            <h3 class="location-name">lake norden</h3>
-            <p class="location-address">502 main ave, unit 109<br>lake norden, sd 57248</p>
-            <div class="location-hours">
-              <p>mon - thu: 7am - 7:30pm</p>
-              <p>fri: 7am - 8:30pm</p>
-              <p>sat: 8am - 8:30pm</p>
-              <p>sun: closed</p>
+            <div class="loc-info">
+              <h3 class="loc-name">lake norden</h3>
+              <p class="loc-address">502 main ave<br>lake norden, sd 57248</p>
+              <span class="loc-badge loc-badge--open">open</span>
             </div>
-            <a href="tel:+16055208960" class="location-phone">(605) 520-8960</a>
-            <a href="https://order.dripos.com/Drip-Coffee-Lake-Norden" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">order ahead</a>
+          </a>
+
+          <a href="https://maps.google.com/?q=928+11th+St+SE+Watertown+SD+57201" target="_blank" rel="noopener noreferrer" class="loc-card">
+            <div class="loc-img-wrap">
+              <img src="./assets/watertown.jpg" alt="Drip Coffee Watertown exterior storefront" loading="lazy" width="1933" height="1220">
+            </div>
+            <div class="loc-info">
+              <h3 class="loc-name">watertown</h3>
+              <p class="loc-address">928 11th st se<br>watertown, sd 57201</p>
+              <span class="loc-badge loc-badge--open">open</span>
+            </div>
+          </a>
+
+          <div class="loc-card loc-card--coming">
+            <div class="loc-img-wrap loc-img-placeholder">
+              <span class="loc-placeholder-text">opening mid-may 2026</span>
+            </div>
+            <div class="loc-info">
+              <h3 class="loc-name">brookings</h3>
+              <p class="loc-address">near sdsu campus<br>brookings, sd</p>
+              <span class="loc-badge loc-badge--soon">coming soon</span>
+            </div>
           </div>
 
-          <div class="location-card location-card--soon">
-            <div class="location-status">
-              <span class="status-dot status-dot--soon"></span>
-              <span class="status-text">opening mid-may 2026</span>
-            </div>
-            <h3 class="location-name">brookings</h3>
-            <p class="location-address">near sdsu campus<br>brookings, sd</p>
-            <p class="location-note">serving students, staff, and the brookings community.</p>
-          </div>
+        </div>
 
-          <div class="location-card location-card--future">
-            <div class="location-status">
-              <span class="status-dot status-dot--future"></span>
-              <span class="status-text">coming soon</span>
-            </div>
-            <h3 class="location-name">watertown</h3>
-            <p class="location-address">watertown, sd</p>
-            <p class="location-note">we're bringing drip to watertown. stay tuned.</p>
-          </div>
-
+        <!-- Hours -->
+        <div class="hours-bar">
+          <p class="hours-label">hours</p>
+          <p class="hours-detail">mon - thu: 7am - 7:30pm &nbsp;&middot;&nbsp; fri: 7am - 8:30pm &nbsp;&middot;&nbsp; sat: 8am - 8:30pm &nbsp;&middot;&nbsp; sun: closed</p>
         </div>
       </div>
     </section>
@@ -174,7 +158,7 @@
       <div class="footer-links">
         <a href="#locations">locations</a>
         <a href="#hiring">careers</a>
-        <a href="https://order.dripos.com/Drip-Coffee-Lake-Norden" target="_blank" rel="noopener noreferrer">order online</a>
+        <a href="https://order.dripos.com/drip-coffee" target="_blank" rel="noopener noreferrer">order online</a>
         <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer">apply</a>
       </div>
       <div class="footer-social">

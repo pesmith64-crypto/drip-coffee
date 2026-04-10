@@ -28,7 +28,7 @@
 
 // Scroll reveal
 (function() {
-  var els = document.querySelectorAll('.location-card, .about-item');
+  var els = document.querySelectorAll('.loc-card, .about-item');
   if (!els.length) return;
 
   var observer = new IntersectionObserver(function(entries) {
