@@ -1,34 +1,35 @@
 // Mobile menu
 (function() {
-  const btn = document.querySelector('.mobile-menu-btn');
-  const nav = document.getElementById('mobileNav');
-  if (!btn || !nav) return;
+  var openBtn = document.querySelector('.mobile-menu-btn');
+  var closeBtn = document.querySelector('.mobile-close-btn');
+  var nav = document.getElementById('mobileNav');
+  if (!openBtn || !nav) return;
 
-  btn.addEventListener('click', function() {
-    const isOpen = nav.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded', isOpen);
-    nav.setAttribute('aria-hidden', !isOpen);
-    // Swap icon
-    btn.innerHTML = isOpen
-      ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>'
-      : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>';
-  });
+  function open() {
+    nav.classList.add('is-open');
+    openBtn.setAttribute('aria-expanded', 'true');
+    nav.setAttribute('aria-hidden', 'false');
+  }
+
+  function close() {
+    nav.classList.remove('is-open');
+    openBtn.setAttribute('aria-expanded', 'false');
+    nav.setAttribute('aria-hidden', 'true');
+  }
+
+  openBtn.addEventListener('click', open);
+  if (closeBtn) closeBtn.addEventListener('click', close);
 
   // Close on link click
   nav.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      nav.classList.remove('is-open');
-      btn.setAttribute('aria-expanded', 'false');
-      nav.setAttribute('aria-hidden', 'true');
-      btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>';
-    });
+    a.addEventListener('click', close);
   });
 })();
 
-// Scroll reveal for location cards
+// Scroll reveal
 (function() {
-  var cards = document.querySelectorAll('.location-card');
-  if (!cards.length) return;
+  var els = document.querySelectorAll('.location-card, .about-item');
+  if (!els.length) return;
 
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
@@ -39,7 +40,7 @@
     });
   }, { threshold: 0.15 });
 
-  cards.forEach(function(card) {
-    observer.observe(card);
+  els.forEach(function(el) {
+    observer.observe(el);
   });
 })();
