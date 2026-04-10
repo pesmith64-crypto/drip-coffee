@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drip Coffee & Baked Goods</title>
+  <meta name="description" content="Drip Coffee & Baked Goods. Craft coffee and fresh-baked goods in Lake Norden, Brookings, and Watertown, South Dakota.">
+  <meta property="og:title" content="Drip Coffee & Baked Goods">
+  <meta property="og:description" content="Craft coffee and fresh-baked goods in Lake Norden, Brookings, and Watertown, South Dakota.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a href="#main" class="sr-only" style="position:absolute;top:0;left:0;padding:8px;background:var(--color-bg);z-index:999;">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Drip Coffee & Baked Goods home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 14c0 0 1.5-4 6-4s6 4 6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M13 18h10v6c0 2.2-2.2 4-5 4s-5-1.8-5-4v-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M23 20h2c1.1 0 2 .9 2 2s-.9 2-2 2h-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 13v-2.5c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5V13" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+          <path d="M18 13v-3.5c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5V13" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+        <span class="logo-text">Drip</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#locations">Locations</a>
+        <a href="#hiring">Careers</a>
+        <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn btn-sm">Apply Now</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#locations">Locations</a>
+      <a href="#hiring">Careers</a>
+      <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn">Apply Now</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-tagline">Coffee & Baked Goods</p>
+        <h1 class="hero-heading">Brewed with<br>intention.</h1>
+        <p class="hero-sub">Craft coffee and fresh-baked goods made daily in South Dakota.</p>
+        <div class="hero-actions">
+          <a href="#locations" class="btn btn-primary">Our Locations</a>
+          <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Join the Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATIONS -->
+    <section class="locations" id="locations">
+      <div class="section-inner">
+        <h2 class="section-heading">Find Us</h2>
+        <div class="locations-grid">
+
+          <div class="location-card location-card--open">
+            <div class="location-badge">Open Now</div>
+            <h3 class="location-name">Lake Norden</h3>
+            <p class="location-detail">Our original home. Stop in for a fresh cup and something from the oven.</p>
+            <p class="location-meta">Lake Norden, SD</p>
+          </div>
+
+          <div class="location-card location-card--soon">
+            <div class="location-badge location-badge--soon">Opening Mid-May 2026</div>
+            <h3 class="location-name">Brookings</h3>
+            <p class="location-detail">Near SDSU. Serving students, staff, and the Brookings community.</p>
+            <p class="location-meta">Brookings, SD</p>
+          </div>
+
+          <div class="location-card location-card--future">
+            <div class="location-badge location-badge--future">Coming Soon</div>
+            <h3 class="location-name">Watertown</h3>
+            <p class="location-detail">We're bringing Drip to Watertown. Stay tuned for details.</p>
+            <p class="location-meta">Watertown, SD</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NOW HIRING -->
+    <section class="hiring" id="hiring">
+      <div class="section-inner hiring-inner">
+        <div class="hiring-text">
+          <h2 class="section-heading">Now Hiring</h2>
+          <p>We're growing and looking for people who care about good coffee, great food, and making someone's day a little better.</p>
+          <p>Positions available across all locations.</p>
+          <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Open Positions</a>
+        </div>
+        <div class="hiring-visual">
+          <div class="hiring-accent"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Drip Coffee & Baked Goods</span>
+        <p class="footer-tagline">South Dakota</p>
+      </div>
+      <div class="footer-links">
+        <a href="#locations">Locations</a>
+        <a href="#hiring">Careers</a>
+        <a href="https://bk-hiring-os.replit.app/#/jobs/drip" target="_blank" rel="noopener noreferrer">Apply</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Drip Coffee & Baked Goods. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
