@@ -483,34 +483,6 @@
   font-weight: 500;
 }
 
-.loc-btn-status {
-  font-size: 0.625rem;
-  letter-spacing: 0.05em;
-  padding: 1px var(--space-2);
-  border-radius: var(--radius-full);
-  font-weight: 500;
-}
-
-.loc-btn-status--open {
-  color: var(--color-sage-dark);
-  background: oklch(from var(--color-sage) l c h / 0.12);
-}
-
-.loc-btn-status--soon {
-  color: #8a7040;
-  background: oklch(from #c9933a l c h / 0.12);
-}
-
-.loc-btn[aria-expanded="true"] .loc-btn-status--open {
-  color: #fff;
-  background: oklch(from #fff l c h / 0.2);
-}
-
-.loc-btn[aria-expanded="true"] .loc-btn-status--soon {
-  color: #fff;
-  background: oklch(from #fff l c h / 0.2);
-}
-
 .loc-hours {
   display: flex;
   align-items: center;
