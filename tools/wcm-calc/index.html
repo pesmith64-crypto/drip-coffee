@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WCM Revenue per Team Member</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,Roboto,Helvetica,Arial,sans-serif;background:#DDD8D0;color:#2B2B2B}
+.top{background:#424A42;padding:18px 20px}
+.top .a{color:#E1CA96;font-weight:700;letter-spacing:.12em;font-size:13px;text-transform:uppercase}
+.top .b{color:#fff;font-size:20px;font-weight:700;margin-top:4px}
+.wrap{padding:16px;max-width:480px;margin:0 auto}
+.card{background:#fff;border-radius:10px;padding:16px;margin-bottom:12px}
+label{display:block;font-size:13px;color:#626D67;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.hires{font-size:44px;font-weight:800;color:#424A42;text-align:center}
+.hires small{font-size:16px;color:#626D67;font-weight:600}
+input[type=range]{width:100%;height:36px;accent-color:#424A42}
+.btns{display:flex;gap:8px;margin-top:6px}
+.btns button{flex:1;font-size:20px;padding:10px;border:0;border-radius:8px;background:#424A42;color:#E1CA96;font-weight:700}
+.big{background:#424A42;color:#fff;border-radius:10px;padding:18px;margin-bottom:12px}
+.big .l{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#DDD8D0;font-weight:700}
+.big .n{font-size:42px;font-weight:800;color:#E1CA96;margin:6px 0 2px}
+.big .s{font-size:15px;color:#DDD8D0}
+.row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #eee;font-size:16px}
+.row:last-child{border:0}.row b{color:#424A42}.red{color:#9B2C2C!important}
+details{margin-top:4px}summary{font-size:14px;color:#626D67;font-weight:700;padding:6px 0}
+.set{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:15px}
+.set input{width:130px;font-size:16px;padding:8px;border:1px solid #9E9E9E;border-radius:6px;text-align:right}
+.foot{font-size:11px;color:#626D67;text-align:center;padding:8px 0 20px}
+</style></head><body>
+<div class="top"><div class="a">World Class Manufacturing</div><div class="b">Revenue per Team Member</div></div>
+<div class="wrap">
+<div class="card"><label>New hires</label>
+<div class="hires"><span id="h">25</span> <small>→ <span id="tm">70</span> team members</small></div>
+<input type="range" id="r" min="0" max="50" value="25">
+<div class="btns"><button onclick="step(-1)">−1</button><button onclick="step(1)">+1</button><button onclick="step(5)">+5</button></div></div>
+<div class="big"><div class="l">Revenue needed per month</div><div class="n" id="need"></div>
+<div class="s" id="needs"></div></div>
+<div class="card">
+<div class="row"><span>Extra revenue needed / month</span><b id="gap"></b></div>
+<div class="row"><span>Revenue per year needed</span><b id="yr"></b></div>
+<div class="row"><span>Today, per team member / month</span><b id="now"></b></div>
+<div class="row"><span>After hires, if revenue stays flat</span><b class="red" id="flat"></b></div>
+<div class="row"><span>Team members today's revenue supports</span><b id="max"></b></div>
+<details><summary>Change assumptions</summary>
+<div class="set">Current team members<input id="c" type="number" value="" placeholder="e.g. 45" inputmode="numeric"></div>
+<div class="set">Current revenue / month ($)<input id="rev" type="number" value="" placeholder="monthly revenue" inputmode="numeric"></div>
+<div class="set">Goal per team member / month ($)<input id="g" type="number" value="30000" inputmode="numeric"></div>
+</details></div>
+<div class="foot">Black Kanyon · World Class Manufacturing</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const M=v=>v>=1e6?'$'+(v/1e6).toFixed(2)+'M':'$'+Math.round(v/1e3)+'K';
+const D=v=>'$'+Math.round(v).toLocaleString();
+function step(n){$('r').value=Math.max(0,Math.min(50,+$('r').value+n));calc()}
+function calc(){const h=+$('r').value,c=+$('c').value||1,rev=+$('rev').value||0,g=+$('g').value,t=c+h,need=t*g;
+$('h').textContent=h;$('tm').textContent=t;$('need').textContent=M(need);
+$('needs').textContent=M(need*12/52)+' a week · '+(need/rev).toFixed(1)+'x today';
+$('gap').textContent=M(Math.max(0,need-rev));$('yr').textContent=M(need*12);
+$('now').textContent=D(rev/c);$('flat').textContent=D(rev/t);$('max').textContent=Math.floor(rev/g)}
+const p=new URLSearchParams(location.hash.slice(1));
+$('c').value=p.get('tm')||localStorage.wcmTm||'';$('rev').value=p.get('rev')||localStorage.wcmRev||'';if(p.get('goal'))$('g').value=p.get('goal');
+['r','c','rev','g'].forEach(i=>$(i).addEventListener('input',()=>{localStorage.wcmTm=$('c').value;localStorage.wcmRev=$('rev').value;calc()}));
+if(!$('c').value||!$('rev').value)document.querySelector('details').open=true;calc();
+</script></body></html>
