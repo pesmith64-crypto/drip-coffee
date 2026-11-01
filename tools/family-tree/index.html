@@ -6,8 +6,14 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#f5efe4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#14110e" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Smith Family Tree">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
 <title>The Smith Family · Heritage</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1122,6 +1128,7 @@ function init(){
   const _render=render;render=function(...a){$('#topbar').style.display='';return _render(...a)};
   route();
   addEventListener('resize',()=>{if(state.page==='tree'&&PZ){const tp=$('#treepage');if(tp)tp.style.top=(innerWidth>=900?$('#topbar').offsetHeight:0)+'px';if(state.mode!=='fan')drawLinks(state.focus);PZ.fit(state.mode==='fan'?'center':undefined)}});
+  if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function(){});
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 </script>
